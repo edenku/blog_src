@@ -5,7 +5,7 @@ categories: hexo
 
 ### 安装Node 与 Git
 
-  hexo的[文档](https://hexo.io/zh-cn/docs/setup)描述很清晰，可以按文档操作。
+  hexo的[文档](https://hexo.io/zh-cn/docs/setup) 描述很清晰，可以按文档操作。
 
 ### 创建本地博客 
 
@@ -24,6 +24,8 @@ categories: hexo
   ```
   D:\Eden\gitee-blog\2021-blog> hexo s [-p 端口号]  //启动，默认端口4000
   ```
+	
+<!-- more -->
    
   3. 使用next主题。
   
