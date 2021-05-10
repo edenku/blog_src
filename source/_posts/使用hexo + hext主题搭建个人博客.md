@@ -1,15 +1,54 @@
 ---
-title: 使用hexo + hext主题搭建个人博客
+title: hexo（一）:使用hexo + hext主题搭建个人博客
 categories: hexo
 ---
 
-### 安装Node 与 Git
+### 准备工作
 
-  hexo的[文档](https://hexo.io/zh-cn/docs/setup) 描述很清晰，可以按文档操作。
+#### 安装nodejs
+
+  从[官网](https://nodejs.org/en/download/)下载最新的安装版本。Windows Installer (.msi) 64-bit
+ 
+  这里也可以从[淘宝镜像](https://npm.taobao.org/)去下载。
+ 
+  一路默认下一步安装。
+  
+#### 安装Hexo
+
+ `npm install -g hexo`全局安装hexo。
+
+ 报错信息：
+
+ Q：`npm WARN deprecated titlecase@1.1.2: no longer maintained`
+ 
+ A：`npm -v`查看npm版本，`npm install -g npm `更新版本即可。
+ 
+<!-- more -->
+
+#### 准备github帐号
+
+注册github帐号
+
+新建一个repository，名称为 `yourname.github.io`，我的帐号名为`e***u`，故我的repository为`e***u.github.io`。
+
+#### 安装git.
+ 
+ 从[官网](https://git-scm.com/download/win)选择64位下载。
+ 
+ 一路默认下一步安装。
 
 ### 创建本地博客 
 
-  1. 博客项目初始化
+#### 环境检测
+
+```
+node -v // 检测node是否正常安装
+hexo -v // 检测hexo是否正常安装
+npm -v  // 检测npm 是否正常安装
+git --version //检测git版本
+```
+
+#### 初始化项目
 
    ```
    D:\Eden\gitee-blog> hexo init 2021-blog
@@ -19,28 +58,16 @@ categories: hexo
    
    以管理员身份运行 powershell, 并执行 set-ExecutionPolicy RemoteSigned 命令，将计算机上的执行策略更改为 RemoteSigned，即可。
    
-  2. 启动
+#### 启动
   
   ```
   D:\Eden\gitee-blog\2021-blog> hexo s [-p 端口号]  //启动，默认端口4000
   ```
-	
-<!-- more -->
-   
-  3. 使用next主题。
-  
-  + 下载next主题。
-  
-  git clone https://github.com/theme-next/hexo-theme-next themes/next
-  
-  访问不了也可以在gitee上搜索别人同步过来的。
-  
-  + 放入博客
-  
-  如果在博客根目录按上面命令下载，则直接跳过。如果是在其他目录下载，则将下载文件夹更名为next，拖放到博客目录中themes目录下。
-  
-  + 修改根目录下的_config.yml配置
-  
+
+#### 修改博客基本信息
+
+	修改博客根目录下的_config.yml文件，后面称站点配置。
+
   ```
   # Site 博客主配置信息
 	title: Hexo                             # 博客名称
@@ -50,11 +77,34 @@ categories: hexo
 	author: Eden 懒散老马                   # 博主名
 	language: zh-CN                         # 站点语言
 	timezone: 'Asia/Shanghai'               # 时区	 
+  ```
+
+### 配置next主题
+  
+#### 下载next主题。
+  
+  git clone https://github.com/theme-next/hexo-theme-next themes/next
+  
+  访问不了也可以在gitee上搜索别人同步过来的。
+  
+  如果在博客根目录按上面命令下载，则直接跳过。如果是在其他目录下载，则将下载文件夹更名为next，拖放到博客目录中themes目录下。
+  
+#### 应用next主题
+  
+	修改站点配置（2021-blog\_config.yml)。
+	
+  ```
   # Extensions 扩展信息配置
-	theme: next								# 主题设置为我们的next主题，默认是landscape
+	theme: next	                            # 主题设置为我们的next主题，默认是landscape
   ```
   
-  + 修改主题目录下的_config.yml配置
+### next扩展配置。
+
+
+#### 主题样式配置
+
+
+	修改主题目录下的_config.yml配置
   
   ```
   # ---------------------------------------------------------------
@@ -83,10 +133,6 @@ categories: hexo
   darkmode: false
   
   ```
-  
-  到这里next主题就成功配置了。后面再补充一些扩展配置。不感兴趣的可以直接跳到下一章节。
-  
-### next扩展配置。
   
 #### 隐藏底部next / 强力驱动字样。
   
@@ -147,7 +193,7 @@ categories: hexo
   
   Dependencies: https://github.com/next-theme/hexo-word-counter 目前设置没有生效，后续跟踪查看。
   
-#### 为博客加妹子
+#### 博客加妹子
   
   npm install -save hexo-helper-live2d
   
@@ -230,6 +276,10 @@ categories: hexo
 			show_result: true  # 是否显示复制成功信息
 	```
 
+### 总结
+
+  本文我们从零开始搭建个人本地hexo博客，并使用next主题。后续我们尝试将hexo博客推送至github、gitee等站点。生成我们的博客站。
+	
 ### 参考链接
 
   + [Hexo-Next 主题博客个性化配置超详细，超全面](https://blog.csdn.net/as480133937/article/details/100138838/)
