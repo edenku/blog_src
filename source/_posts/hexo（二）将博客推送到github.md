@@ -54,35 +54,8 @@ deploy:
  
  说明配置成功，再推送就可以免密推送了。
  
- >> 我这里后来推送，免密没有成功。源于我自己github多个账号的原因，所以这里需要重新调整下
+### 小结
 
-### github多账号配置
-
- + 重新生成ssh秘钥
- 
-  ```
-	// 检查是否存在
-	cd ~/.ssh
-	ls
-	// 生成密钥，一路回车即可,生成秘钥邮箱最好和账号邮箱一致
-	ssh-keygen -t rsa -C “jack@126.com” 
-	Enter file in which to save the key (C:\Users\ci22578/.ssh/id_rsa): C:\Users\ci22578/.ssh/id_rsa_github_eden
- ```
- 
- + 不能设置全局的username和email
- 
- ```
- PS D:\gitee-blog\2021-blog> git config --global --unset user.name
- PS D:\gitee-blog\2021-blog> git config --global --unset user.email
- ```
- 
- + 用jack账号提交，在目录设置jack的账号和邮箱
- 
- ```
- PS D:\gitee-blog\2021-blog\.deploy_git> git config user.name "jack"
- PS D:\gitee-blog\2021-blog\.deploy_git> git config user.email "jack@qq.com"
- ```
- 
- + 配置config
- 
- + dddd
+  我最终配置没有成功，发现我本地deploy文件里的配置是https的，因为免密是ssh的，所以地址一定要使用git@github.com:jack/jack.github.io.git这种。
+	
+	修改后推送成功。
