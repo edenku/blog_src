@@ -1,6 +1,7 @@
 ---
 title: git常用使用命令
 categories: git
+date: 2021-05-11
 ---
 
 ### clone

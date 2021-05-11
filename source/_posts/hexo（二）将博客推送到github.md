@@ -1,6 +1,7 @@
 ---
 title: hexo（二）:将博客推送至github
 categories: hexo
+date: 2021-05-11
 ---
 
 
