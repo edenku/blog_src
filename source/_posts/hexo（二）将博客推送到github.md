@@ -1,7 +1,8 @@
 ---
 title: hexo（二）:将博客推送至github
-categories: hexo
+categories: 使用hexo搭建博客
 date: 2021-05-11
+tags: hexo
 ---
 
 

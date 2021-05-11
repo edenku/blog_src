@@ -1,6 +1,6 @@
 ---
 title: git常用使用命令
-categories: git
+tags: git
 date: 2021-05-11
 ---
 

@@ -1,6 +1,7 @@
 ---
-title: hexo（一）:使用hexo + hext主题搭建个人博客
-categories: hexo
+title: hexo（一）:使用hexo + next主题搭建个人博客
+categories: 使用hexo搭建博客
+tags: hexo
 date: 2021-05-10
 ---
 

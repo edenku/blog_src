@@ -1,7 +1,8 @@
 ---
 title: hexo（三）使用gitee搭建自己的图床
-categories: hexo
+categories: 使用hexo搭建博客
 date: 2021-05-11
+tags: hexo
 ---
 
 ## gitee创建个人repo
