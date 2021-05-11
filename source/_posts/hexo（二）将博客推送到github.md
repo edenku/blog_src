@@ -57,4 +57,27 @@ deploy:
 
 ### github多账号配置
 
+ + 重新生成ssh秘钥
  
+  ```
+	// 检查是否存在
+	cd ~/.ssh
+	ls
+	// 生成密钥，一路回车即可,生成秘钥邮箱最好和账号邮箱一致
+	ssh-keygen -t rsa -C “jack@126.com” 
+	Enter file in which to save the key (C:\Users\ci22578/.ssh/id_rsa): C:\Users\ci22578/.ssh/id_rsa_github_eden
+ ```
+ 
+ + 不能设置全局的username和email
+ 
+ ```
+ PS D:\gitee-blog\2021-blog> git config --global --unset user.name
+ PS D:\gitee-blog\2021-blog> git config --global --unset user.email
+ ```
+ 
+ + 用jack账号提交，在目录设置jack的账号和邮箱
+ 
+ ```
+ PS D:\gitee-blog\2021-blog\.deploy_git> git config user.name "jack"
+ PS D:\gitee-blog\2021-blog\.deploy_git> git config user.email "jack@qq.com"
+ ```
