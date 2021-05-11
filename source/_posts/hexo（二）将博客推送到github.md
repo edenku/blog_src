@@ -81,3 +81,7 @@ deploy:
  PS D:\gitee-blog\2021-blog\.deploy_git> git config user.name "jack"
  PS D:\gitee-blog\2021-blog\.deploy_git> git config user.email "jack@qq.com"
  ```
+ 
+ + 配置config
+ 
+ + 
