@@ -52,3 +52,9 @@ deploy:
  `Hi jack! You've successfully authenticated, but GitHub does not provide shell access.`
  
  说明配置成功，再推送就可以免密推送了。
+ 
+ >> 我这里后来推送，免密没有成功。源于我自己github多个账号的原因，所以这里需要重新调整下
+
+### github多账号配置
+
+ 
