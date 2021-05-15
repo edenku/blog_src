@@ -62,7 +62,11 @@ SpringBoot：   2.4.5
 
 SpringCloud： 2020.0.2
 
-SpringCloud Alibaba：2.2.1.RELEASE
+SpringCloud Alibaba：2021.1
+
+[版本依赖关系](https://github.com/alibaba/spring-cloud-alibaba/wiki/版本说明) 
+
+![image-20210514154208991](C:%5CUsers%5Cci22578%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210514154208991.png)
 
 #### 服务注册到Nacos
 
@@ -89,6 +93,22 @@ SpringCloud Alibaba：2.2.1.RELEASE
         </dependency>
     </dependencies>
 ```
+
+**配置文件**
+
+```yaml
+server:
+  port: 8000
+spring:
+  application:
+    name: ruipin-auth
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://127.0.0.1:8848
+```
+
+
 
 **启动入口开启服务发现**
 
