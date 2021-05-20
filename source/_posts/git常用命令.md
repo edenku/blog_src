@@ -2,6 +2,7 @@
 title: git常用使用命令
 tags: git
 date: 2021-05-11
+categories: 常用命令
 ---
 
 ### clone
