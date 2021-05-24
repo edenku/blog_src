@@ -5,8 +5,6 @@ tags: SpringCloud
 date: 2021-05-12
 ---
 
-> 公司要对一个项目进行重构，借此机会正好尝试从头搭建一个Cloud微服务架构。
-
 ## SpringCloud 与 SpringBoot的版本
 
 因为SpringCloud与SpringBoot的版本需要对应，否则会出现异常。
