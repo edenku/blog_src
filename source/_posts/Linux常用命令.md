@@ -37,3 +37,7 @@ systemctl disable firewalld.service
 **查看防火墙所有开放的端口**
 
 firewall-cmd --zone=public --list-ports
+
+### 查看系统版本
+
+cat /etc/redhat-release
