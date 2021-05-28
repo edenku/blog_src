@@ -66,7 +66,7 @@ SpringCloud Alibaba：2021.1
 
 [版本依赖关系](https://github.com/alibaba/spring-cloud-alibaba/wiki/版本说明) 
 
-![image-20210514154208991](C:%5CUsers%5Cci22578%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210514154208991.png)
+![image-20210514154208991](https://gitee.com/ruocy/image_repo/raw/master/images/image-20210514154208991.png)
 
 #### 服务注册到Nacos
 

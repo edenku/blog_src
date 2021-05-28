@@ -41,3 +41,9 @@ firewall-cmd --zone=public --list-ports
 ### 查看系统版本
 
 cat /etc/redhat-release
+
+### 常见插件安装
+
+#### sz 和 rz安装
+
+yum install lrzsz

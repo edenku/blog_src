@@ -243,6 +243,9 @@ feign:
 @SpringBootApplication
 @EnableDiscoveryClient
 // 开启feign调用
+// *************重点**重点**重点**重点*************
+// 如果FeignClient的包不在启动类的子包下，一定要添加扫描包，
+// 比如@EnableFeignClients("com.xx.*")
 @EnableFeignClients
 public class AuthApplication {
     public static void main(String[] args) {
@@ -282,6 +285,25 @@ public class SampleController {
 然后我们调用auth服务，也可以正常调用。
 
 ![image-20210515114902468](https://gitee.com/ruocy/image_repo/raw/master/images/image-20210515114902468.png)
+
+#### 问题总结
+
+**Consider defining a bean of type 'xxx' in your config**
+
+![image-20210528145021258](https://gitee.com/ruocy/image_repo/raw/master/images/image-20210528145021258.png)
+
+服务调用方启动失败，报错找不到FeignClient类，解决办法：调用方的启动类添加EnableFeignClient注解，并配置扫描包的路径。
+
+```
+@EnableFeignClients("com.ruipin.*")
+public class DemoApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
+}
+```
+
+
 
 #### 总结
 
