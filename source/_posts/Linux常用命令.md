@@ -47,3 +47,14 @@ cat /etc/redhat-release
 #### sz 和 rz安装
 
 yum install lrzsz
+
+### 删除乱码文件
+
+```shell
+ls -i   # 显示文件的节点号
+find -inum 3031169 -delete
+```
+
+再看就已经成功删除了。
+
+![image-20210530221326703](https://gitee.com/ruocy/image_repo/raw/master/images/image-20210530221326703.png)
