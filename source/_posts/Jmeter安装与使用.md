@@ -1,6 +1,7 @@
 ---
 title: Jmeter安装与使用
 date: 2021-05-28
+categories: 软件安装
 tags: Jmeter
 ---
 

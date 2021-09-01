@@ -58,3 +58,32 @@ find -inum 3031169 -delete
 再看就已经成功删除了。
 
 ![image-20210530221326703](https://gitee.com/ruocy/image_repo/raw/master/images/image-20210530221326703.png)
+
+### 查看服务器占用空间
+
+**df**
+
+df可以查看根目录大小、使用比例及其挂入点。
+
+![image-20210617094210820](https://gitee.com/ruocy/image_repo/raw/master/images/image-20210617094210820.png)
+
+**du**
+
+du可以查看文件及文件夹的大小。但目录层级过多的时候，列表数目过多并不利于查看。所以我们可以指定目录深度 
+
+```
+du -h --max-depth=1 /usr/local
+```
+
+
+
+![image-20210617095002419](https://gitee.com/ruocy/image_repo/raw/master/images/image-20210617095002419.png)
+
+### 文件查找
+
+```
+find / -name http.conf  	# 在根目录下查找文件http.conf
+find / -name 'name'		    # 在根目录查找文件名包含name的文件
+
+```
+

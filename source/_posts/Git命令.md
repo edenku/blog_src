@@ -30,3 +30,40 @@ PS D:\code\demo> git remote add origin http://xx.xx.xx.xx:port/demo/demo.git
 PS D:\code\demo> git push -u origin master
 ```
 
+### reset
+
+#### gitlab回滚代码
+
+gitlab主master分支默认受保护，不允许任何人进行代码回滚，所以我们回滚需要先删除受保护标签。
+
+![image-20210629104157190](C:%5CUsers%5Cci22578%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210629104157190.png)
+
+project-setting 去设置
+
+![image-20210629104419193](https://gitee.com/ruocy/image_repo/raw/master/images/image-20210629104419193.png)
+
+点击不再保护按钮。
+
+![image-20210629104530667](https://gitee.com/ruocy/image_repo/raw/master/images/image-20210629104530667.png)
+
+接下来，我们就可以回滚到我们指定的代码提交记录了。
+
+```powershell
+git reset --hard <commit-id>
+git push -f   ## 强制推送
+## 输入用户密码即可
+```
+
+操作完以后最好还是把这个保护再添加回来。
+
+### tag
+
+```
+# 打标签
+git tag -a V1.0 -m 'V1.0的描述'
+# 删除标签
+git tag -d V1.0
+# 推送远程
+git push origin V1.0
+```
+
