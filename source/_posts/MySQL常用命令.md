@@ -15,4 +15,13 @@ tags: MySQL
    	( SELECT @cdate := date_add( CURDATE( ), INTERVAL 1 DAY ) FROM rp_notice LIMIT 7 ) a
    ```
 
-2. todo 
+2. MySQL 根据JSON字段内容进行判断
+
+   ```sql
+   select *
+   from tb_review a 
+   where json_unquote(json_extract(a.json_content,'$."ext:base:isA"')) = '否'
+   -- JSON字段要用双引号 引起来，且用json_unquote去除引号
+   ```
+
+   
