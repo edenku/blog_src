@@ -1,5 +1,5 @@
 ---
-title: Jenkins用户权限控制
+title: Jenkins常用插件
 date: 2021-10-29
 categories: Jenkins
 tags: Jenkins
